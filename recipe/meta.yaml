@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/plant-isce3/archive/v{{ version }}.tar.gz
-  sha256: fcec8b674cd2ce0512bbb2f0788707736e3cb502549b7803b385dfadad143c3d
+  sha256: 0ed9c4a807be34a8139ea7585bb8fb32888312fc0135461d9a85c854b4e4c6ae
 
 build:
   entry_points:
@@ -24,7 +24,7 @@ build:
     - plant_isce3_rslc_eap_analysis = plant_isce3.plant_isce3_rslc_eap_analysis:main_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -37,7 +37,7 @@ requirements:
     - numpy >=1.25.2
     - gdal ==3.11.4
     - isce3 >=0.25.3
-    - plant >=0.8.2
+    - plant >=0.8.3
     - libnetcdf
     - h5py
     - matplotlib-base
